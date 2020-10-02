@@ -1,0 +1,34 @@
+.h2-heading {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 0 1rem 1rem;
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
+
+.svg-play {
+  margin-right: 10px;
+  width: 12px;
+  opacity: 0.6;
+  color: $color-gray;
+}
+
+.genre-link {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.6;
+  color: $color-gray;
+  border: 1px solid transparent;
+  @include transition;
+  @include border-radius(50px);
+  &:hover {
+    opacity: 1;
+    border: 1px solid $color-gray;
+  }
+}

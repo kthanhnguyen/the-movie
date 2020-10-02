@@ -2,6 +2,7 @@ import * as TYPES from "../constants/actionType";
 
 export const initialState = {
   movies: {},
+  movieGenre: [],
 };
 
 export const movieReducer = (state = initialState, action) => {
@@ -9,12 +10,10 @@ export const movieReducer = (state = initialState, action) => {
     case TYPES.FETCH_MOVIE:
       state.movies = action.payload;
       return { ...state };
-    // case TYPES.FETCH_CAST:
-    //   return { ...state, cast: action.payload };
-    // case TYPES.FETCH_MOVIE_LOADING:
-    //   return { ...state, loading: true };
-    // case TYPES.FETCH_MOVIE_FINISHED:
-    //   return { ...state, loading: false };
+    case TYPES.FETCH_MOVIES_GENRE:
+      state.movieGenre = action.payload;
+      return { ...state };
+
     default:
       return { ...state };
   }
